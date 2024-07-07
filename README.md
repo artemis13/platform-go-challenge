@@ -1,3 +1,16 @@
+# Table of contents
+
+ 1. [GlobalWebIndex Engineering Challenge](#globalwebindex-engineering-challenge)
+ 2. [Features](#features)
+ 3. [Prerequisities](#prerequisities)
+ 4. [Installation](#Installation)
+ 5. [Usage](#usage)
+ 6. [API Endpoints](#api-endpoints)
+ 7. [Running Tests](#running-tests)
+ 8. [Useful Resources](#useful-resources)
+ 9. [Contact](#contact)
+
+
 # GlobalWebIndex Engineering Challenge
 
 ## Introduction
@@ -29,3 +42,57 @@ It is appreciated, though not required, if a Dockerfile is included.
 Just create a fork from the current repo and send it to us!
 
 Good luck, potential colleague!
+
+
+# Features
+
+# Prerequisities
+
+# Installation
+
+# Usage
+
+# API Endpoints
+
+The server defines the following RESTful endpoints:
+``` bash
+POST /users/{id}/favorites: Adds a favorite to a user favotites list.
+#e.g. curl comamnd 
+#curl -X POST http://localhost:1323/users/1/favorites \
+#-H "Content-Type: application/json" \
+#-d '{"Type":0,"Description":"Interested in sports","Chart":{"How interested are you in Sports?":"","XAxis":"Interest",#"YAxis":"Amount","Data":{"Quite interested":32,"Very interested":31.9}}}'
+
+
+GET /users/{id}/favorites: Retrieve all favorities of a user with a certain id.
+#e.g curl comamnd 
+#curl -X GET http://localhost:1323/users/1/favorites
+
+PUT /users/{id}/favorites/{id}: Edits a user\'s favorite description 
+#e.g curl comamnd 
+#curl -X PUT "http://localhost:1323/users/1/favorites/d7fdf287-48cd-42ee-a75a-e73325e7d363" \
+#     -H "Content-Type: application/json" \
+#     -d '{"description": "Favorite Sport Trends"}'
+
+
+DELETE /users/{id}/favorites/{id}: Delete a favorite from a user\'s list.
+#e.g curl comamnd
+#curl -X DELETE "http://localhost:1323/users/1/favorites/d7fdf287-48cd-42ee-a75a-e73325e7d363"
+```
+# Running Tests
+
+To execute the automated tests for this system, run the following command in the project directory:
+``` bash
+go test -count=1 ./...
+```
+# Useful Resources
+
+[Exploring Golang REST API Frameworks](https://dev.to/xngwng/top-5-go-rest-api-frameworks-k0e)
+Tutorial: [Developing a RESTful API with Go and Gin](https://go.dev/doc/tutorial/web-service-gin)
+Tutorial: [How to build an API using Go and Gorilla mux](https://dev.to/envitab/how-to-build-an-api-using-go-ffk)
+Tutorial: [Build a Golang RESTful Stock API With the Echo Framework](https://betterprogramming.pub/intro-77f65f73f6d3)
+[echo QuickStart](https://echo.labstack.com/docs/quick-start)
+[echo CRUD](https://echo.labstack.com/docs/cookbook/crud)
+
+# Contact
+
+Created by [Artemis Apostolou](https://github.com/artemis13) for the purposes of GWI Go Platrform Challenge
