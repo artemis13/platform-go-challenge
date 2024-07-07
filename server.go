@@ -1,6 +1,7 @@
 package main
 
 import (
+	"gwi-platformGoC/routes"
 	"net/http"
 
 	"github.com/labstack/echo/v4"
@@ -18,7 +19,7 @@ func main() {
 		return c.String(http.StatusOK, "GWI Go Platform Challenge running!\n")
 	})
 
-	//routes.RegisterRoutes(e)
+	routes.RegisterRoutes(e)
 
 	e.Logger.Fatal(e.Start(":1323"))
 }
