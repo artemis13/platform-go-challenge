@@ -1,9 +1,10 @@
 package handlers
 
 import (
-	"gwi-platformGoC/models"
-	"gwi-platformGoC/storage"
 	"net/http"
+
+	"github.com/artemis13/platform-go-challenge/models"
+	"github.com/artemis13/platform-go-challenge/storage"
 
 	"github.com/google/uuid"
 	"github.com/labstack/echo/v4"

@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"gwi-platformGoC/handlers"
+	"github.com/artemis13/platform-go-challenge/handlers"
 
 	"github.com/labstack/echo/v4"
 )

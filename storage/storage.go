@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"sync"
 
-	"gwi-platformGoC/models"
+	"github.com/artemis13/platform-go-challenge/models"
 )
 
 var (

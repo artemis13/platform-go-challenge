@@ -2,13 +2,14 @@ package handlers_test
 
 import (
 	"encoding/json"
-	"gwi-platformGoC/handlers"
-	"gwi-platformGoC/models"
-	"gwi-platformGoC/storage"
 	"net/http"
 	"net/http/httptest"
 	"strings"
 	"testing"
+
+	"github.com/artemis13/platform-go-challenge/handlers"
+	"github.com/artemis13/platform-go-challenge/models"
+	"github.com/artemis13/platform-go-challenge/storage"
 
 	"github.com/labstack/echo/v4"
 	"github.com/stretchr/testify/assert"

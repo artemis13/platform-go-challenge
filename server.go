@@ -1,8 +1,9 @@
 package main
 
 import (
-	"gwi-platformGoC/routes"
 	"net/http"
+
+	"github.com/artemis13/platform-go-challenge/routes"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"

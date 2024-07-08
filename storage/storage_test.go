@@ -1,9 +1,10 @@
 package storage_test
 
 import (
-	"gwi-platformGoC/models"
-	"gwi-platformGoC/storage"
 	"testing"
+
+	"github.com/artemis13/platform-go-challenge/models"
+	"github.com/artemis13/platform-go-challenge/storage"
 
 	"github.com/stretchr/testify/assert"
 )
