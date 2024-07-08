@@ -91,3 +91,8 @@ func EditUserFavorite(c echo.Context) error {
 	}
 	return echo.NewHTTPError(http.StatusNotFound, "asset not found")
 }
+
+// PublicHandler handles public requests (no authentication required)
+func PublicHandler(c echo.Context) error {
+	return c.JSON(http.StatusOK, map[string]string{"message": "This is a public endpoint"})
+}

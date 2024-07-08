@@ -28,6 +28,24 @@ func main() {
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
+	//security-related headers
+	e.Use(middleware.Secure())
+
+	//CORS settings
+	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: []string{"*"},
+		AllowMethods: []string{http.MethodGet, http.MethodPost, http.MethodPut, http.MethodDelete},
+	}))
+
+	//limit the number of requests
+	e.Use(middleware.RateLimiter(middleware.NewRateLimiterMemoryStore(20)))
+
+	// Use custom middleware for HTTPS redirection -- a valid certificate should be present
+	//e.Use(myMiddleware.HTTPSRedirect)
+
+	// Use authentication middleware
+	//e.Use(myMiddleware.AuthMiddleware)
+
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "GWI Go Platform Challenge running!\n")
 	})

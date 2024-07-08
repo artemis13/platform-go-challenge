@@ -58,25 +58,29 @@ The server defines the following RESTful endpoints:
 ``` bash
 POST /users/{id}/favorites: Adds a favorite to a user favotites list.
 #e.g. curl comamnd 
-#curl -X POST http://localhost:1323/users/1/favorites \
-#-H "Content-Type: application/json" \
-#-d '{"Type":0,"Description":"Interested in sports","Chart":{"How interested are you in Sports?":"","XAxis":"Interest",#"YAxis":"Amount","Data":{"Quite interested":32,"Very interested":31.9}}}'
+#curl -X POST "http://localhost:1323/users/1/favorites" \
+#     -H "Authorization: gwi-token-12345" \
+#     -H "Content-Type: application/json" \
+#     -d '{"Type":0,"Description":"Interested in sports","Chart":{"Title":"How interested are you in Sports?","XAxis":"Interest","YAxis":"Amount",#"Data":{"Quite interested":32,"Very interested":31.9}}}'
+
+
 
 
 GET /users/{id}/favorites: Retrieve all favorities of a user with a certain id.
 #e.g curl comamnd 
-#curl -X GET http://localhost:1323/users/1/favorites
+#curl GET "http://localhost:1323/users/1/favorites" -H "Authorization:gwi-token-12345"
+
 
 PUT /users/{id}/favorites/{id}: Edits a user\'s favorite description 
-#e.g curl comamnd 
-#curl -X PUT "http://localhost:1323/users/1/favorites/d7fdf287-48cd-42ee-a75a-e73325e7d363" \
+#curl -X PUT "http://localhost:1323/users/1/favorites/1a80e52a-f604-41e2-9aa2-4fd0f732e649" \
+#     -H "Authorization: gwi-token-12345" \
 #     -H "Content-Type: application/json" \
 #     -d '{"description": "Favorite Sport Trends"}'
 
-
 DELETE /users/{id}/favorites/{id}: Delete a favorite from a user\'s list.
 #e.g curl comamnd
-#curl -X DELETE "http://localhost:1323/users/1/favorites/d7fdf287-48cd-42ee-a75a-e73325e7d363"
+#curl -X DELETE "http://localhost:1323/users/1/favorites/1a80e52a-f604-41e2-9aa2-4fd0f732e649" \
+#-H "Authorization:gwi-token-12345"
 ```
 # Running Tests
 
