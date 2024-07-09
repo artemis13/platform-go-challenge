@@ -136,12 +136,12 @@ go test -count=1 ./...
 # Useful Resources
 Some of the tutorials used to decide the framework and the modules that were used
 
-1.[Exploring Golang REST API Frameworks](https://dev.to/xngwng/top-5-go-rest-api-frameworks-k0e)
-2.Tutorial: [Developing a RESTful API with Go and Gin](https://go.dev/doc/tutorial/web-service-gin)
-3.Tutorial: [How to build an API using Go and Gorilla mux](https://dev.to/envitab/how-to-build-an-api-using-go-ffk)
-4.Tutorial: [Build a Golang RESTful Stock API With the Echo Framework](https://betterprogramming.pub/intro-77f65f73f6d3)
-5.[echo QuickStart](https://echo.labstack.com/docs/quick-start)
-6.[echo CRUD](https://echo.labstack.com/docs/cookbook/crud)
+1. [Exploring Golang REST API Frameworks](https://dev.to/xngwng/top-5-go-rest-api-frameworks-k0e)
+2. Tutorial: [Developing a RESTful API with Go and Gin](https://go.dev/doc/tutorial/web-service-gin)
+3. Tutorial: [How to build an API using Go and Gorilla mux](https://dev.to/envitab/how-to-build-an-api-using-go-ffk)
+4. Tutorial: [Build a Golang RESTful Stock API With the Echo Framework](https://betterprogramming.pub/intro-77f65f73f6d3)
+5. [echo QuickStart](https://echo.labstack.com/docs/quick-start)
+6. [echo CRUD](https://echo.labstack.com/docs/cookbook/crud)
 
 # Contact
 
