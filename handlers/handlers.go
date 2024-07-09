@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"net/http"
+	"strconv"
 
 	"github.com/artemis13/platform-go-challenge/models"
 	"github.com/artemis13/platform-go-challenge/storage"
@@ -23,7 +24,45 @@ func GetUserFavorites(c echo.Context) error {
 	if !exists {
 		return c.JSON(http.StatusNotFound, map[string]string{"error": "user not found"})
 	}
-	return c.JSON(http.StatusOK, user.Favorites)
+
+	// Get pagination parameters
+	pageStr := c.QueryParam("page")
+	limitStr := c.QueryParam("limit")
+
+	page, err := strconv.Atoi(pageStr)
+	if err != nil || page < 1 {
+		page = 1
+	}
+
+	limit, err := strconv.Atoi(limitStr)
+	if err != nil || limit < 1 {
+		limit = 10
+	}
+
+	// Calculate the offset and subset of favorites
+	offset := (page - 1) * limit
+	favorites := user.Favorites
+
+	// Return the subset of favorites
+	start := offset
+	end := offset + limit
+	if start > len(favorites) {
+		start = len(favorites)
+	}
+	if end > len(favorites) {
+		end = len(favorites)
+	}
+	paginatedFavorites := favorites[start:end]
+
+	// Include pagination metadata
+	response := map[string]interface{}{
+		"page":      page,
+		"limit":     limit,
+		"total":     len(favorites),
+		"favorites": paginatedFavorites,
+	}
+
+	return c.JSON(http.StatusOK, response)
 }
 
 func AddUserFavorite(c echo.Context) error {
