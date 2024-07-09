@@ -43,8 +43,7 @@ func main() {
 	// Use custom middleware for HTTPS redirection -- a valid certificate should be present
 	//e.Use(myMiddleware.HTTPSRedirect)
 
-	// Use authentication middleware
-	//e.Use(myMiddleware.AuthMiddleware)
+	//also caching midlleware should me applyed for better performance
 
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "GWI Go Platform Challenge running!\n")
