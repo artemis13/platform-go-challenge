@@ -4,11 +4,10 @@
  2. [Features](#features)
  3. [Prerequisities](#prerequisities)
  4. [Installation](#Installation)
- 5. [Usage](#usage)
- 6. [API Endpoints](#api-endpoints)
- 7. [Running Tests](#running-tests)
- 8. [Useful Resources](#useful-resources)
- 9. [Contact](#contact)
+ 5. [API Endpoints](#api-endpoints)
+ 6. [Running Tests](#running-tests)
+ 7. [Useful Resources](#useful-resources)
+ 8. [Contact](#contact)
 
 
 # GlobalWebIndex Engineering Challenge
@@ -45,12 +44,53 @@ Good luck, potential colleague!
 
 
 # Features
+- **Asset Management**: Users can manage their favorite assets including adding, retrieving, editing, and deleting favorites.
+- **Authentication**: Secure endpoints using JWT-based authentication.
+- **Pagination**: Efficiently handle large sets of data with pagination.
+- **Caching**: Improve performance with in-memory caching for frequently accessed endpoints.  -- not implemented
+- **Data Management**: Currently, data is managed in-memory. Future enhancements may include MongoDB or AWS-based data persistence.
+- **Tests**: Some tests were implemented althought a lot of cases still missing
+
 
 # Prerequisities
+- **Go 1.22.4**: [Install Go](https://golang.org/doc/install)
+- **Git**: Make sure Git is installed on your system. [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+### Go Modules
+- `github.com/davecgh/go-spew v1.1.1`
+- `github.com/golang-jwt/jwt v3.2.2+incompatible`
+- `github.com/joho/godotenv v1.5.1`
+- `github.com/labstack/gommon v0.4.2`
+- `github.com/mattn/go-colorable v0.1.13`
+- `github.com/mattn/go-isatty v0.0.20`
+- `github.com/pmezard/go-difflib v1.0.0`
+- `github.com/valyala/bytebufferpool v1.0.0`
+- `github.com/valyala/fasttemplate v1.2.2`
+- `golang.org/x/crypto v0.22.0`
+- `golang.org/x/net v0.24.0`
+- `golang.org/x/sys v0.19.0`
+- `golang.org/x/text v0.14.0`
+- `golang.org/x/time v0.5.0`
+- `gopkg.in/yaml.v3 v3.0.1`
+- `github.com/labstack/echo/v4 v4.6.1`
+
+ - setup env file to the root althought for of the purpose the .env file is pushed to git repository
+
 
 # Installation
 
-# Usage
+``` bash
+   #Clone the repository: 
+   git clone https://github.com/yourusername/platform-go-challenge.git
+   #browse to tjhe directory
+   cd platform-go-challenge
+   #install depentancies
+   go mod tidy
+   #setup env file to the root with the following, 
+   #althought for of the purpose the .env file is pushed to git repository
+   GOPROXY=https://proxy.golang.org,direct
+
+   go run server.go
+```
 
 # API Endpoints
 
@@ -94,13 +134,14 @@ To execute the automated tests for this system, run the following command in the
 go test -count=1 ./...
 ```
 # Useful Resources
+Some of the tutorials used to decide the framework and the modules that were used
 
-[Exploring Golang REST API Frameworks](https://dev.to/xngwng/top-5-go-rest-api-frameworks-k0e)
-Tutorial: [Developing a RESTful API with Go and Gin](https://go.dev/doc/tutorial/web-service-gin)
-Tutorial: [How to build an API using Go and Gorilla mux](https://dev.to/envitab/how-to-build-an-api-using-go-ffk)
-Tutorial: [Build a Golang RESTful Stock API With the Echo Framework](https://betterprogramming.pub/intro-77f65f73f6d3)
-[echo QuickStart](https://echo.labstack.com/docs/quick-start)
-[echo CRUD](https://echo.labstack.com/docs/cookbook/crud)
+-[Exploring Golang REST API Frameworks](https://dev.to/xngwng/top-5-go-rest-api-frameworks-k0e)
+-Tutorial: [Developing a RESTful API with Go and Gin](https://go.dev/doc/tutorial/web-service-gin)
+-Tutorial: [How to build an API using Go and Gorilla mux](https://dev.to/envitab/how-to-build-an-api-using-go-ffk)
+-Tutorial: [Build a Golang RESTful Stock API With the Echo Framework](https://betterprogramming.pub/intro-77f65f73f6d3)
+-[echo QuickStart](https://echo.labstack.com/docs/quick-start)
+-[echo CRUD](https://echo.labstack.com/docs/cookbook/crud)
 
 # Contact
 
