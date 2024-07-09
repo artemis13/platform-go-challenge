@@ -108,8 +108,6 @@ curl -X POST "http://localhost:1323/users/1/favorites" \
 "Data":{"Quite interested":32,"Very interested":31.9}}}'
 
 
-
-
 GET /users/{id}/favorites: Retrieve all favorities of a user with a certain id.
 #e.g curl comamnd 
 curl GET "http://localhost:1323/users/1/favorites" -H "Authorization:gwi-token-12345"
@@ -130,6 +128,9 @@ DELETE /users/{id}/favorites/{id}: Delete a favorite from a user\'s list.
 curl -X DELETE "http://localhost:1323/users/1/favorites/1a80e52a-f604-41e2-9aa2-4fd0f732e649" \
 -H "Authorization:gwi-token-12345"
 ```
+
+![explorer_sU84BsvTO6](https://github.com/artemis13/platform-go-challenge/assets/4024511/73911c80-1bf6-4177-bced-d51afa102f79)
+
 # Running Tests
 
 To execute the automated tests for this system, run the following command in the project directory:
