@@ -50,11 +50,14 @@ Good luck, potential colleague!
 - **Caching**: Improve performance with in-memory caching for frequently accessed endpoints.  -- not implemented
 - **Data Management**: Currently, data is managed in-memory. Future enhancements may include MongoDB or AWS-based data persistence.
 - **Tests**: Some tests were implemented althought a lot of cases are still missing
+- **Docker File**: A docker file was created bases on tutorials.No testing or knowledge if it is correct...although it looks correct...sorry
 
 
 # Prerequisities
 - **Go 1.22.4**: [Install Go](https://golang.org/doc/install)
 - **Git**: Make sure Git is installed on your system. [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Docker](https://www.docker.com/)  
+
 ### Go Modules
 - `github.com/davecgh/go-spew v1.1.1`
 - `github.com/golang-jwt/jwt v3.2.2+incompatible`
@@ -142,6 +145,7 @@ Some of the tutorials used to decide the framework and the modules that were use
 4. Tutorial: [Build a Golang RESTful Stock API With the Echo Framework](https://betterprogramming.pub/intro-77f65f73f6d3)
 5. [echo QuickStart](https://echo.labstack.com/docs/quick-start)
 6. [echo CRUD](https://echo.labstack.com/docs/cookbook/crud)
+7. [How to Dockerize a Golang Application?](https://www.geeksforgeeks.org/how-to-dockerize-a-golang-application/)
 
 # Contact
 
