@@ -76,7 +76,7 @@ Good luck, potential colleague!
 - `gopkg.in/yaml.v3 v3.0.1`
 - `github.com/labstack/echo/v4 v4.6.1`
 
- - setup env file to the root, althought the purpose of demonstarion the .env file is pushed to git repository
+ - setup env file to the root, althought for the purpose of demonstarion the .env file is pushed to git repository
 
 
 # Installation
